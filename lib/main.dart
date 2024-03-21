@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_planner_app/common/main_screen.dart';
 import 'package:travel_planner_app/common/on_boarding_screen.dart';
 
 void main() {
@@ -10,6 +11,6 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: OnBoardingScreen());
+    return const MaterialApp(home: MainScreen());
   }
 }
