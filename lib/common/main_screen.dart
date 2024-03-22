@@ -30,7 +30,7 @@ class _MainScreenState extends State<MainScreen> {
           unselectedItemColor: Colors.black26,
           unselectedFontSize: 0,
           currentIndex: _currentIndex,
-          elevation: 5,
+          elevation: 0,
           selectedFontSize: 0,
           onTap: (index) {
             setState(() {

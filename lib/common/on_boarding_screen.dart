@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_planner_app/common/helper.dart';
+import 'package:travel_planner_app/common/main_screen.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   const OnBoardingScreen({super.key});
@@ -52,6 +53,14 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                                       18,
                                       color: Colors.black38),
                                 ),
+                                SizedBox(
+                                  height: 20,
+                                ),
+                                ElevatedButton(
+                                    onPressed: () {
+                                      navigateTO(context, MainScreen());
+                                    },
+                                    child: Text("Get Started"))
                               ],
                             )
                           : Container(),

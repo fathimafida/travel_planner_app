@@ -20,3 +20,7 @@ Text smallTextStyle(String text, double size, {Color? color}) {
       style: TextStyle(
           fontSize: size, color: color, fontWeight: FontWeight.normal));
 }
+
+void navigateTO(BuildContext context, Widget widget) {
+  Navigator.push(context, MaterialPageRoute(builder: (context) => widget));
+}
