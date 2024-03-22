@@ -83,6 +83,16 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                   Text("Inspiration"),
                   Text("Emotions"),
                 ])),
+            SizedBox(
+              height: 20,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                largeTextStyle("Explore More", 20),
+                smallTextStyle("See all", 15)
+              ],
+            ),
           ],
         ),
       ),
