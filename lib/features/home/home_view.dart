@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:travel_planner_app/common/helper.dart';
+import 'package:travel_planner_app/features/detailPage/detail_page.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -44,6 +45,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
               alignment: Alignment.centerLeft,
               child: TabBar(
                 dividerColor: Colors.transparent,
+                indicatorPadding: EdgeInsets.zero,
                 labelStyle:
                     TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 labelPadding: EdgeInsets.only(left: 20, right: 20),
@@ -75,17 +77,23 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                       itemCount: 3,
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) {
-                        return Container(
-                          margin: const EdgeInsets.only(right: 10),
-                          height: 300,
-                          width: 200,
-                          decoration: BoxDecoration(
-                            image: const DecorationImage(
-                              image: NetworkImage(
-                                  "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"),
-                              fit: BoxFit.cover,
+                        return InkWell(
+                          onTap: () {
+                            navigateTO(context, DetailPage());
+                          },
+                          child: Container(
+                            margin: const EdgeInsets.only(right: 10),
+                            height: 300,
+                            width: 200,
+                            decoration: BoxDecoration(
+                              border: Border.all(),
+                              image: const DecorationImage(
+                                image: NetworkImage(
+                                    "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"),
+                                fit: BoxFit.cover,
+                              ),
+                              borderRadius: BorderRadius.circular(12),
                             ),
-                            borderRadius: BorderRadius.circular(12),
                           ),
                         );
                       }),
@@ -98,7 +106,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                largeTextStyle("Explore More", 20),
+                largeTextStyle("Explore More", 25),
                 smallTextStyle("See all", 15)
               ],
             ),
@@ -141,7 +149,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                   ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
