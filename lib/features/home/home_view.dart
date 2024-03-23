@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 import 'package:travel_planner_app/common/helper.dart';
 
@@ -20,10 +22,14 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(child: Icon(Icons.menu)),
-                Spacer(),
+                Icon(Icons.menu),
+                Icon(Icons.search),
               ],
+            ),
+            const SizedBox(
+              height: 20,
             ),
             Container(
               child: largeTextStyle("Discover", 25),
@@ -42,7 +48,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                   indicatorSize: TabBarIndicatorSize.label,
                   isScrollable: true,
                   // indicator: CircleTabIndicator(color: Colors.black, radius: 4),
-                  tabs: [
+                  tabs: const [
                     Tab(
                       text: "Places",
                     ),
@@ -66,12 +72,11 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) {
                         return Container(
-                          margin: EdgeInsets.only(right: 10),
+                          margin: const EdgeInsets.only(right: 10),
                           height: 300,
                           width: 200,
                           decoration: BoxDecoration(
-                            color: Colors.red,
-                            image: DecorationImage(
+                            image: const DecorationImage(
                               image: NetworkImage(
                                   "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"),
                               fit: BoxFit.cover,
@@ -80,10 +85,10 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                           ),
                         );
                       }),
-                  Text("Inspiration"),
-                  Text("Emotions"),
+                  const Text("Inspiration"),
+                  const Text("Emotions"),
                 ])),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Row(
