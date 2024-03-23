@@ -125,7 +125,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                   ExploreCard(
                     title: "Kayaking",
                     image:
-                        "https://i.pinimg.com/736x/d5/5a/e1/d55ae13ff7613b4e0d2dc56b3b95a5c2.jpg",
+                        "https://img.lovepik.com/photo/45009/1475.jpg_wh860.jpg",
                   ),
                   ExploreCard(
                     title: "Hiking",
@@ -135,7 +135,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                   ExploreCard(
                     title: "Snorkling",
                     image:
-                        "https://media.istockphoto.com/id/1250582712/vector/cartoon-drawing-young-men-are-scuba-diving-by-wearing-diving-mask-orange-trousers-and-fins.jpg?s=612x612&w=0&k=20&c=MqeQScYYn2ahZhx8d7_sBx03VCzI0ojJuY2fzjmB9Z4=",
+                        "https://static.vecteezy.com/system/resources/previews/000/208/412/non_2x/scuba-diving-vector-illustration.jpg",
                   ),
                   ExploreCard(
                     title: "Skying",
@@ -178,7 +178,7 @@ class ExploreCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
               border: Border.all(),
               image: DecorationImage(
-                  image: NetworkImage(image), fit: BoxFit.cover),
+                  image: CachedNetworkImageProvider(image), fit: BoxFit.cover),
             )),
         SizedBox(
           height: 10,
