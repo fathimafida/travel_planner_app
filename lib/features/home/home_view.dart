@@ -1,6 +1,9 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:travel_planner_app/common/helper.dart';
 
 class HomeView extends StatefulWidget {
@@ -37,29 +40,30 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
             SizedBox(
               height: 40,
             ),
-            Container(
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: TabBar(
-                  labelPadding: EdgeInsets.only(left: 20, right: 20),
-                  controller: _tabController,
-                  labelColor: Colors.black,
-                  unselectedLabelColor: Colors.grey,
-                  indicatorSize: TabBarIndicatorSize.label,
-                  isScrollable: true,
-                  // indicator: CircleTabIndicator(color: Colors.black, radius: 4),
-                  tabs: const [
-                    Tab(
-                      text: "Places",
-                    ),
-                    Tab(
-                      text: "Inspiration",
-                    ),
-                    Tab(
-                      text: "Emotions",
-                    ),
-                  ],
-                ),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: TabBar(
+                dividerColor: Colors.transparent,
+                labelStyle:
+                    TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                labelPadding: EdgeInsets.only(left: 20, right: 20),
+                controller: _tabController,
+                labelColor: Colors.black,
+                unselectedLabelColor: Colors.grey,
+                indicatorSize: TabBarIndicatorSize.label,
+                isScrollable: true,
+                // indicator: CircleTabIndicator(color: Colors.black, radius: 4),
+                tabs: const [
+                  Tab(
+                    text: "Places",
+                  ),
+                  Tab(
+                    text: "Inspiration",
+                  ),
+                  Tab(
+                    text: "Emotions",
+                  ),
+                ],
               ),
             ),
             Container(
@@ -98,9 +102,81 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                 smallTextStyle("See all", 15)
               ],
             ),
+            SizedBox(
+              height: 10,
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  ExploreCard(
+                    title: "Balloning",
+                    image:
+                        "https://cdn2.vectorstock.com/i/1000x1000/81/16/cartoon-hot-air-balloon-vector-25188116.jpg",
+                  ),
+                  ExploreCard(
+                    title: "Kayaking",
+                    image:
+                        "https://i.pinimg.com/736x/d5/5a/e1/d55ae13ff7613b4e0d2dc56b3b95a5c2.jpg",
+                  ),
+                  ExploreCard(
+                    title: "Hiking",
+                    image:
+                        "https://img.freepik.com/free-vector/disabled-man-with-prosthetic-legs-going-hiking-mountains-cartoon-vector-illustration_1284-76427.jpg?size=626&ext=jpg&ga=GA1.1.735520172.1710806400&semt=ais",
+                  ),
+                  ExploreCard(
+                    title: "Snorkling",
+                    image:
+                        "https://media.istockphoto.com/id/1250582712/vector/cartoon-drawing-young-men-are-scuba-diving-by-wearing-diving-mask-orange-trousers-and-fins.jpg?s=612x612&w=0&k=20&c=MqeQScYYn2ahZhx8d7_sBx03VCzI0ojJuY2fzjmB9Z4=",
+                  ),
+                  ExploreCard(
+                    title: "Skying",
+                    image:
+                        "https://t4.ftcdn.net/jpg/02/38/01/05/360_F_238010554_POIZXUVxMJrkXUJ1kFXy7u2CcXFpyN8D.jpg",
+                  ),
+                  ExploreCard(
+                    title: "Zipline",
+                    image:
+                        "https://static.vecteezy.com/system/resources/previews/016/690/647/original/zip-line-illustration-with-visitors-walking-on-an-obstacle-course-and-outdoor-rope-adventure-park-in-forest-in-flat-cartoon-hand-drawn-templates-vector.jpg",
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),
+    );
+  }
+}
+
+class ExploreCard extends StatelessWidget {
+  const ExploreCard({
+    super.key,
+    required this.image,
+    required this.title,
+  });
+  final String image;
+  final String title;
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+            margin: EdgeInsets.only(right: 10),
+            height: 70,
+            width: 70,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(),
+              image: DecorationImage(
+                  image: NetworkImage(image), fit: BoxFit.cover),
+            )),
+        SizedBox(
+          height: 10,
+        ),
+        Text(title)
+      ],
     );
   }
 }
