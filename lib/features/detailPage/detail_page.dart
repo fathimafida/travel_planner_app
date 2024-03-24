@@ -61,7 +61,7 @@ class _DetailPageState extends State<DetailPage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            largeTextStyle("Yosemitte", 20),
+                            largeTextStyle("Yosemitte", 25),
                             largeTextStyle("\$${250}", 20),
                           ],
                         ),
