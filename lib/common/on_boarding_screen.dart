@@ -56,14 +56,28 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                                 SizedBox(
                                   height: 20,
                                 ),
-                                ElevatedButton(
-                                    onPressed: () {
-                                      navigateTO(context, MainScreen());
-                                    },
-                                    child: Text("Get Started"))
                               ],
                             )
                           : Container(),
+                      index == 2
+                          ? FilledButton(
+                              onPressed: () {
+                                navigateTO(context, MainScreen());
+                              },
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 50, vertical: 10),
+                                child: Text("Get Started",
+                                    style: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold)),
+                              ),
+                              style: ElevatedButton.styleFrom(
+                                  shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30),
+                              )),
+                            )
+                          : SizedBox(),
                       Column(
                         children: List.generate(3, (indexDots) {
                           return Container(
