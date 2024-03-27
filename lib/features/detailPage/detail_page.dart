@@ -23,7 +23,7 @@ class _DetailPageState extends State<DetailPage> {
                 child: Container(
                   height: 350,
                   width: double.maxFinite,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
                         image: NetworkImage(
                             "https://img.lovepik.com/photo/45009/1475.jpg_wh860.jpg"),
@@ -38,7 +38,7 @@ class _DetailPageState extends State<DetailPage> {
                       onPressed: () {
                         Navigator.pop(context);
                       },
-                      icon: Icon(Icons.arrow_back)),
+                      icon: const Icon(Icons.arrow_back)),
                 ],
               )),
               Positioned(
@@ -67,29 +67,29 @@ class _DetailPageState extends State<DetailPage> {
                         ),
                         Row(
                           children: [
-                            Icon(
+                            const Icon(
                               Icons.location_on,
                               size: 18,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 5,
                             ),
                             smallTextStyle("USA,California", 12),
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         Wrap(
                           children: List.generate(5, (index) {
-                            return Icon(
+                            return const Icon(
                               Icons.star,
                               color: Colors.amber,
                               size: 20,
                             );
                           }),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 20,
                         ),
                         largeTextStyle("People", 18),
@@ -99,15 +99,15 @@ class _DetailPageState extends State<DetailPage> {
                             return Container(
                               height: 50,
                               width: 50,
-                              margin: EdgeInsets.all(10),
+                              margin: const EdgeInsets.all(10),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
                                   border: Border.all()),
-                              child: Icon(Icons.person),
+                              child: const Icon(Icons.person),
                             );
                           }),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 10,
                         ),
                         largeTextStyle("Description", 18),
@@ -115,7 +115,7 @@ class _DetailPageState extends State<DetailPage> {
                           "Kayaking is a sport and recreational activity in which an individual uses a Kayak, a small boat, typically narrow and shallow, unpowered, to navigate waterways. It is a popular recreational activity, a competitive sport, and a means of transportation in some cases.",
                           15,
                         ),
-                        SizedBox(
+                        const SizedBox(
                           height: 30,
                         ),
                         Row(children: [
@@ -126,9 +126,9 @@ class _DetailPageState extends State<DetailPage> {
                               borderRadius: BorderRadius.circular(10),
                               border: Border.all(),
                             ),
-                            child: Icon(Icons.favorite_outline),
+                            child: const Icon(Icons.favorite_outline),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           Expanded(
