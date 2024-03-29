@@ -116,7 +116,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  largeTextStyle("Available Tickets", 24),
+                  largeTextStyle("Available Tickets", 25),
                   smallTextStyle("See all", 15)
                 ],
               ),
@@ -292,7 +292,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  largeTextStyle("Explore More", 24),
+                  largeTextStyle("Explore More", 25),
                   smallTextStyle("See all", 15)
                 ],
               ),
