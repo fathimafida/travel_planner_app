@@ -34,13 +34,13 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                 ],
               ),
               const SizedBox(
-                height: 20,
+                height: 10,
               ),
               Container(
                 child: largeTextStyle("Discover", 25),
               ),
               SizedBox(
-                height: 40,
+                height: 0,
               ),
               Align(
                 alignment: Alignment.centerLeft,
@@ -71,7 +71,7 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
               ),
               Container(
                   margin: EdgeInsets.only(top: 20),
-                  height: 300,
+                  height: 250,
                   width: double.maxFinite,
                   child: TabBarView(controller: _tabController, children: [
                     ListView.builder(
@@ -116,49 +116,9 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  largeTextStyle("Explore More", 24),
+                  largeTextStyle("Available Tickets", 24),
                   smallTextStyle("See all", 15)
                 ],
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    ExploreCard(
-                      title: "Balloning",
-                      image:
-                          "https://cdn2.vectorstock.com/i/1000x1000/81/16/cartoon-hot-air-balloon-vector-25188116.jpg",
-                    ),
-                    ExploreCard(
-                      title: "Kayaking",
-                      image:
-                          "https://img.lovepik.com/photo/45009/1475.jpg_wh860.jpg",
-                    ),
-                    ExploreCard(
-                      title: "Hiking",
-                      image:
-                          "https://img.freepik.com/free-vector/disabled-man-with-prosthetic-legs-going-hiking-mountains-cartoon-vector-illustration_1284-76427.jpg?size=626&ext=jpg&ga=GA1.1.735520172.1710806400&semt=ais",
-                    ),
-                    ExploreCard(
-                      title: "Snorkling",
-                      image:
-                          "https://static.vecteezy.com/system/resources/previews/000/208/412/non_2x/scuba-diving-vector-illustration.jpg",
-                    ),
-                    ExploreCard(
-                      title: "Skying",
-                      image:
-                          "https://t4.ftcdn.net/jpg/02/38/01/05/360_F_238010554_POIZXUVxMJrkXUJ1kFXy7u2CcXFpyN8D.jpg",
-                    ),
-                    ExploreCard(
-                      title: "Zipline",
-                      image:
-                          "https://static.vecteezy.com/system/resources/previews/016/690/647/original/zip-line-illustration-with-visitors-walking-on-an-obstacle-course-and-outdoor-rope-adventure-park-in-forest-in-flat-cartoon-hand-drawn-templates-vector.jpg",
-                    ),
-                  ],
-                ),
               ),
               SizedBox(
                 height: 20,
@@ -329,6 +289,53 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
                       bottomRight: Radius.circular(20),
                     ),
                   )),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  largeTextStyle("Explore More", 24),
+                  smallTextStyle("See all", 15)
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    ExploreCard(
+                      title: "Balloning",
+                      image:
+                          "https://cdn2.vectorstock.com/i/1000x1000/81/16/cartoon-hot-air-balloon-vector-25188116.jpg",
+                    ),
+                    ExploreCard(
+                      title: "Kayaking",
+                      image:
+                          "https://img.lovepik.com/photo/45009/1475.jpg_wh860.jpg",
+                    ),
+                    ExploreCard(
+                      title: "Hiking",
+                      image:
+                          "https://img.freepik.com/free-vector/disabled-man-with-prosthetic-legs-going-hiking-mountains-cartoon-vector-illustration_1284-76427.jpg?size=626&ext=jpg&ga=GA1.1.735520172.1710806400&semt=ais",
+                    ),
+                    ExploreCard(
+                      title: "Snorkling",
+                      image:
+                          "https://static.vecteezy.com/system/resources/previews/000/208/412/non_2x/scuba-diving-vector-illustration.jpg",
+                    ),
+                    ExploreCard(
+                      title: "Skying",
+                      image:
+                          "https://t4.ftcdn.net/jpg/02/38/01/05/360_F_238010554_POIZXUVxMJrkXUJ1kFXy7u2CcXFpyN8D.jpg",
+                    ),
+                    ExploreCard(
+                      title: "Zipline",
+                      image:
+                          "https://static.vecteezy.com/system/resources/previews/016/690/647/original/zip-line-illustration-with-visitors-walking-on-an-obstacle-course-and-outdoor-rope-adventure-park-in-forest-in-flat-cartoon-hand-drawn-templates-vector.jpg",
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
