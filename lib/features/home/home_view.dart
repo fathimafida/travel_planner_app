@@ -113,182 +113,74 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
               const SizedBox(
                 height: 20,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  largeTextStyle("Available Tickets", 25),
-                  smallTextStyle("See all", 15)
-                ],
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Container(
-                height: 80,
-                width: double.maxFinite,
-                decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 184, 233, 233),
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(20),
-                    topRight: Radius.circular(20),
-                  ),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(12),
-                  child: Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          largeTextStyle("NYC", 20),
-                          Spacer(),
-                          Container(
-                            padding: EdgeInsets.all(3.0),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              border: Border.all(
-                                width: 2.5,
-                                color: Color(0xFF264653),
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            child: Stack(
-                              children: [
-                                SizedBox(
-                                  height: 24,
-                                  child: LayoutBuilder(
-                                    builder: (context, constraints) {
-                                      return Flex(
-                                          direction: Axis.horizontal,
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          mainAxisSize: MainAxisSize.max,
-                                          children: List.generate(
-                                              (constraints.constrainWidth() /
-                                                      10)
-                                                  .floor(),
-                                              (index) => SizedBox(
-                                                  height: 1,
-                                                  width: 5,
-                                                  child: DecoratedBox(
-                                                    decoration: BoxDecoration(
-                                                      color: Color(0xFF264653),
-                                                      // color: Colors.white,
-                                                      borderRadius:
-                                                          BorderRadius.only(
-                                                        topRight:
-                                                            Radius.circular(20),
-                                                        bottomRight:
-                                                            Radius.circular(20),
-                                                      ),
-                                                    ),
-                                                  ))));
-                                    },
-                                  ),
-                                ),
-                                Center(
-                                  child: Transform.rotate(
-                                      angle: 1.5,
-                                      child: Icon(
-                                        Icons.local_airport_rounded,
-                                        color: Color(0xFF264653),
-                                      )),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Container(
-                            padding: EdgeInsets.all(3.0),
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                border: Border.all(
-                                  width: 2.5,
-                                  color: Color(0xFF264653),
-                                )),
-                          ),
-                          Spacer(),
-                          largeTextStyle("LDN", 20)
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          mediumTextStyle("New York", 18),
-                          mediumTextStyle("8H 30M", 18),
-                          mediumTextStyle("London", 18)
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Container(
-                height: 20,
-                width: double.maxFinite,
-                color: Color.fromARGB(255, 184, 233, 233),
-                child: Row(
-                  children: [
-                    SizedBox(
-                      height: 20,
-                      width: 10,
-                      child: DecoratedBox(
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(20),
-                            bottomRight: Radius.circular(20),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                        child: LayoutBuilder(builder: (context, constraints) {
-                      return Flex(
-                          direction: Axis.horizontal,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          mainAxisSize: MainAxisSize.max,
-                          children: List.generate(
-                              (constraints.constrainWidth() / 10).floor(),
-                              (index) => SizedBox(
-                                  height: 1,
-                                  width: 5,
-                                  child: DecoratedBox(
-                                    decoration: BoxDecoration(
-                                      color: Color(0xFF264653),
-                                      borderRadius: BorderRadius.only(
-                                        topRight: Radius.circular(20),
-                                        bottomRight: Radius.circular(20),
-                                      ),
-                                    ),
-                                  ))));
-                    })),
-                    SizedBox(
-                      height: 20,
-                      width: 10,
-                      child: DecoratedBox(
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(20),
-                            bottomLeft: Radius.circular(20),
-                          ),
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                  height: 80,
-                  width: double.maxFinite,
-                  decoration: BoxDecoration(
-                    color: Color.fromARGB(255, 184, 233, 233),
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(20),
-                      bottomRight: Radius.circular(20),
-                    ),
-                  )),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //   children: [
+              //     largeTextStyle("Available Tickets", 25),
+              //     smallTextStyle("See all", 15)
+              //   ],
+              // ),
+              // SizedBox(
+              //   height: 20,
+              // ),
+              // Container1(),
+              // Container(
+              //   height: 20,
+              //   width: double.maxFinite,
+              //   color: Color.fromARGB(255, 184, 233, 233),
+              //   child: Row(
+              //     children: [
+              //       SizedBox(
+              //         height: 20,
+              //         width: 10,
+              //         child: DecoratedBox(
+              //           decoration: BoxDecoration(
+              //             color: Colors.white,
+              //             borderRadius: BorderRadius.only(
+              //               topRight: Radius.circular(20),
+              //               bottomRight: Radius.circular(20),
+              //             ),
+              //           ),
+              //         ),
+              //       ),
+              //       Expanded(
+              //           child: LayoutBuilder(builder: (context, constraints) {
+              //         return Flex(
+              //             direction: Axis.horizontal,
+              //             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //             mainAxisSize: MainAxisSize.max,
+              //             children: List.generate(
+              //                 (constraints.constrainWidth() / 10).floor(),
+              //                 (index) => SizedBox(
+              //                     height: 1,
+              //                     width: 5,
+              //                     child: DecoratedBox(
+              //                       decoration: BoxDecoration(
+              //                         color: Color(0xFF264653),
+              //                         borderRadius: BorderRadius.only(
+              //                           topRight: Radius.circular(20),
+              //                           bottomRight: Radius.circular(20),
+              //                         ),
+              //                       ),
+              //                     ))));
+              //       })),
+              //       SizedBox(
+              //         height: 20,
+              //         width: 10,
+              //         child: DecoratedBox(
+              //           decoration: BoxDecoration(
+              //             color: Colors.white,
+              //             borderRadius: BorderRadius.only(
+              //               topLeft: Radius.circular(20),
+              //               bottomLeft: Radius.circular(20),
+              //             ),
+              //           ),
+              //         ),
+              //       )
+              //     ],
+              //   ),
+              // ),
+              // Container2(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -339,6 +231,153 @@ class _HomeViewState extends State<HomeView> with TickerProviderStateMixin {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class Container1 extends StatelessWidget {
+  const Container1({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 80,
+      width: double.maxFinite,
+      decoration: BoxDecoration(
+        color: Color.fromARGB(255, 184, 233, 233),
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
+        ),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(12),
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                largeTextStyle("NYC", 20),
+                Spacer(),
+                Container(
+                  padding: EdgeInsets.all(3.0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(
+                      width: 2.5,
+                      color: Color(0xFF264653),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Stack(
+                    children: [
+                      SizedBox(
+                        height: 24,
+                        child: LayoutBuilder(
+                          builder: (context, constraints) {
+                            return Flex(
+                                direction: Axis.horizontal,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                mainAxisSize: MainAxisSize.max,
+                                children: List.generate(
+                                    (constraints.constrainWidth() / 10).floor(),
+                                    (index) => SizedBox(
+                                        height: 1,
+                                        width: 5,
+                                        child: DecoratedBox(
+                                          decoration: BoxDecoration(
+                                            color: Color(0xFF264653),
+                                            // color: Colors.white,
+                                            borderRadius: BorderRadius.only(
+                                              topRight: Radius.circular(20),
+                                              bottomRight: Radius.circular(20),
+                                            ),
+                                          ),
+                                        ))));
+                          },
+                        ),
+                      ),
+                      Center(
+                        child: Transform.rotate(
+                            angle: 1.5,
+                            child: Icon(
+                              Icons.local_airport_rounded,
+                              color: Color(0xFF264653),
+                            )),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.all(3.0),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(
+                        width: 2.5,
+                        color: Color(0xFF264653),
+                      )),
+                ),
+                Spacer(),
+                largeTextStyle("LDN", 20)
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                mediumTextStyle("New York", 18),
+                mediumTextStyle("8H 30M", 18),
+                mediumTextStyle("London", 18)
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class Container2 extends StatelessWidget {
+  const Container2({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(12),
+      height: 80,
+      width: double.maxFinite,
+      decoration: BoxDecoration(
+        color: Color.fromARGB(255, 184, 233, 233),
+        borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(20),
+          bottomRight: Radius.circular(20),
+        ),
+      ),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              largeTextStyle("May 1", 18),
+              largeTextStyle("9:00 AM", 18),
+              largeTextStyle("23", 18)
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              mediumTextStyle("Date", 18),
+              mediumTextStyle("Departure Time", 18),
+              mediumTextStyle("Nuumber", 18)
+            ],
+          ),
+        ],
       ),
     );
   }
